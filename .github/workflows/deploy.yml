@@ -13,10 +13,10 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v3  # GitHub 저장소의 소스코드를 가져오는 액션
 
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v3  # JDK 설정 액션
         with:
-          java-version: '17'  # Java 17 버전 사용
+          java-version: '21'  # Java 17 버전 사용
           distribution: 'temurin'  # AdoptOpenJDK의 Temurin 배포판 사용
 
       - name: mvnw 실행 권한 부여

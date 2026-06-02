@@ -19,8 +19,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://3.36.74.121", "http://3.36.74.121/:80")
-                .allowedOrigins("http://secretjuju.kro.kr", "https://secretjuju.kro.kr/")
-                .allowedMethods("OPTIONS", "GET", "POST", "PUT", "DELETE");
+                .allowedOrigins(
+                        "http://3.36.74.121",
+                        "http://3.36.74.121:80",
+                        "http://secretjuju.kro.kr",
+                        "https://secretjuju.kro.kr"
+                );
     }
 }

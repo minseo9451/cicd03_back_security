@@ -54,8 +54,12 @@ public class SecurityConfig {
                     @Override
                     public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                         CorsConfiguration configuration = new CorsConfiguration();
-                        configuration.setAllowedOrigins(Arrays.asList("http://3.36.74.121/", "http://3.36.74.121/:80"));
-                        configuration.setAllowedOrigins(Arrays.asList("http://secretjuju.kro.kr", "https://secretjuju.kro.kr"));
+                        configuration.setAllowedOrigins(Arrays.asList(
+                                "http://3.36.74.121",
+                                "http://3.36.74.121:80",
+                                "http://secretjuju.kro.kr",
+                                "https://secretjuju.kro.kr"
+                        ));
                         configuration.setAllowedMethods(Collections.singletonList("*"));
                         configuration.setAllowCredentials(true);
 
